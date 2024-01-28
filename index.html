@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#product-details">Product Details</a></li>
+            <li><a href="#size-options">Size Options</a></li>
+            <li><a href="#quantity">Quantity</a></li>
+            <li><a href="#cart">Cart</a></li>
+            <li><a href="#productDetailsContent">Learn More</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="container" id="product-details">
+        <div class="left">
+            <div class="cover-image">
+                <img src="img4.webp" alt="img" id="mainImage">
+            </div>
+            <div class="sub-images">
+                <div class="image">
+                    <img src="img2.webp" alt="img" onclick="changeImage('img2.webp')">
+                </div>
+                <div class="image">
+                    <img src="img3.webp" alt="img" onclick="changeImage('img3.webp')">
+                </div>
+                <div class="image">
+                    <img src="img4.webp" alt="img" onclick="changeImage('img4.webp')">
+                </div>
+                <div class="image">
+                    <img src="img5.webp" alt="img" onclick="changeImage('img5.webp')">
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            
+            <div class="pname">Stylish Men's shirts</div>
+            <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+
+            </div>
+            <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i>250</div>
+
+            <div class="size" id="size-options">
+                <p>Size :</p>
+                <div class="psize active" onclick="selectSize(this)">M</div>
+                <div class="psize" onclick="selectSize(this)">L</div>
+                <div class="psize" onclick="selectSize(this)">XL</div>
+                <div class="psize" onclick="selectSize(this)">XXL</div>
+            </div>
+
+
+        
+            <div class="quantity" id="quantity">
+                <p>Quantity :</p>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+    
+
+        
+            <div class="product-details-header" onclick="toggleProductDetails()" >
+                <p>Product Details</p>
+                <span id="detailsToggleIcon">+</span>
+            </div>
+
+            
+            <div class="product-details-content" id="productDetailsContent">
+                <table>
+                    <tr>
+                        <td>Pack of</td>
+                        <td>  1</td>
+                    </tr>
+                    <tr>
+                        <td>Material</td>
+                        <td>cotton</td>
+                    </tr>
+                    <tr>
+                        <td>Fit</td>
+                        <td>Regular Fit</td>
+                    </tr>
+                    <tr>
+                        <td>Sleeve</td>
+                        <td>Half Sleeve</td>
+                    </tr>
+                    <tr>
+                        <td>Closure</td>
+                        <td>Button</td>
+                    </tr>
+                </table>
+            </div>
+        
+
+            <div class="btn-box" id="cart">
+
+                <button class="cart" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                <button class="buy"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cart-trigger" onclick="toggleCartBox()">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <div class="cart-box" id="cartBox">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <span onclick="closeCartBox()"> ×</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be displayed here -->
+        </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/b23e0e833a.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
